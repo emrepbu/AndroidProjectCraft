@@ -2,13 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/AndroidProjectCraft/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Android Project Craft</title>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- Handle GitHub Pages SPA routing -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      (function() {
+        // Handle redirects from 404.html
+        const query = window.location.search;
+        if (query.includes('?p=')) {
+          const path = query.replace('?p=', '');
+          const route = path ? path : '/';
+          window.history.replaceState(null, null, 
+            route.includes('?') ? route : `${route}`
+          );
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="./src/main.tsx"></script>
   </body>
 </html>
